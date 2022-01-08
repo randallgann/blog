@@ -12,6 +12,9 @@ db = SQLAlchemy()
 def create_app(config_name: str):
     """The application factory"""
     app = Flask(__name__)
+
+    # the config attribute of the Flask object
+    # where you can customize configuration
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
@@ -22,8 +25,11 @@ def create_app(config_name: str):
     # attach routes and custom error pages here
 
     # blueprint is registered with the application
+    # adds a class flask.blueprints.Blueprint at the same level as app
     from .main import main as main_blueprint
 
+    # this adds the main_blueprint class to
+    # locals/app/blueprints: dict
     app.register_blueprint(main_blueprint)
 
     return app
