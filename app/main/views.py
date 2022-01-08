@@ -18,6 +18,6 @@ def index():
 def blog():
     return render_template("blog.html.jinja")
 
-@main.route("/favicon.ico")
+@main.route("/favicon.ico", methods=["GET", "POST"])
 def favicon():
     return send_from_directory(os.path.join(main.root_path, 'static'), 'favicon.ico')
