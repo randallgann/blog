@@ -26,6 +26,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    # HOST = "0.0.0.0"
     SQLALCHEMY_DATABASE_URI = os.environ.get("DEV_DATABASE_URL")
 
 
@@ -38,11 +39,25 @@ class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
+class DockerConfig(ProductionConfig):
+    @classmethod
+    def init_app(cls, app):
+        ProductionConfig.init_app(app)
+        # log to stderr - Docker auto captures stderr and exposes through docker logs command
+        import logging
+        from logging import StreamHandler
+
+        file_handler = StreamHandler()
+        file_handler.setLevel(logging.INFO)
+        app.logger.addHandler(file_handler)
+
+
 config = {
     "development": DevelopmentConfig,
     "testing": TestingConfig,
     "production": ProductionConfig,
     "default": DevelopmentConfig,
+    "docker": DockerConfig,
 }
 
 # this needs to be tested
