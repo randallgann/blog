@@ -10,6 +10,7 @@ az group list
 az account list
 az account set -s sandbox sub
 az account show
+az acr login --name containers38472
 ```
 ````
 
@@ -17,10 +18,17 @@ az account show
 
 ````
 ```
+docker build -t myimage .
 docker images
+docker images -a
+**<name>:<name> intermediate images used to build other images
+docker image rm python:latest
+docker rm -f serene_allen - this removes container
 docker container ls (--all)
 docker container rm -f $(docker ps -aq)
-docker image rm python:latest
+docker ps - confirm running containers
+docker run -t -i python:3.6-alpine - enter @ interpreter
+
 
 ```
 ````
