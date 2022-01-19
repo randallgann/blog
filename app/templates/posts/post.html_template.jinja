@@ -1,0 +1,82 @@
+{% extends "base.html.jinja" %} {% block title %} {{ post_title }} {% endblock
+%} {% block post_content %}
+<div class="card card-header bg-light">
+  <ol class="breadcrumb" style="padding-top: 10px">
+    <li>
+      <a href="/" title="IT. CLOUD. DATA. ANALYSIS."
+        ><i class="fa fa-home fa-lg" style="padding-right: 5px"></i
+      ></a>
+    </li>
+    /
+    <li>
+      <a href="/" title="code" style="padding-left: 5px; padding-right: 5px"
+        >Code</a
+      >
+    </li>
+    /
+    <li class="active" style="padding-left: 5px">Github Quick Hits!</li>
+  </ol>
+</div>
+<section id="content">
+  <article>
+    <header class="page-header">
+      <h1 style="padding-top: 35px">
+        <a
+          href="./githubQuickhits.html.jinja"
+          rel="bookmark"
+          title="Permalink to Github Quick Hits!"
+          >Github Quick Hits!</a
+        >
+      </h1>
+    </header>
+    <div class="entry-content">
+      <div class="card card-body bg-dark" style="width: 36rem">
+        <footer class="post-info">
+          <span class="badge bg-secondary">Date</span>
+          <span class="published">
+            <time datetime="2018-08-24T15:40:00-04:00" style="color: white"
+              >Fri 24 August 2018</time
+            >
+          </span>
+          <span class="badge bg-secondary">Tags</span>
+          <a href="./tag/git.html">git</a>
+          /
+          <a href="./tag/coding.html">coding</a>
+        </footer>
+      </div>
+      <h2 style="padding-top: 10px">Command List</h2>
+      <code>
+        <p>
+          git add *
+          <br />
+          git add filename
+          <br />
+          git status
+          <br />
+          git commit -m "message"
+          <br />
+          git remote add origin url
+          <br />
+          git push -u origin master
+          <br />
+          git pull origin master
+          <br />
+          git remote set-url url
+          <br />
+          git init
+          <br />
+          <br />
+          <br />
+          gh auth login
+        </p>
+      </code>
+      <h4 style="padding-top: 10px">Use Github Template</h4>
+      <p>
+        Create a template repo on
+        <a href="https://github.com/randallgann/project_template">github</a>
+      </p>
+      <h4 style="padding-top: 10px">Create New Project</h4>
+    </div>
+  </article>
+</section>
+{% endblock %}

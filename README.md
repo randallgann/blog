@@ -1,3 +1,7 @@
+## Python Flask Website
+
+This repo contains code for my personal blog related to tech and professional interests. It is implemented using python's Flask framework.
+
 ## COMMANDS USED
 
 ### Azure

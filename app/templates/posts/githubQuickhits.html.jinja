@@ -1,0 +1,83 @@
+{% extends "base.html.jinja" %} {% block title %} {{ post_title }} {% endblock
+%} {% block post_content %}
+<div class="card card-header bg-light">
+  <ol class="breadcrumb" style="padding-top: 10px">
+    <li>
+      <a href="/" title="IT. CLOUD. DATA. ANALYSIS."
+        ><i class="fa fa-home fa-lg" style="padding-right: 5px"></i
+      ></a>
+    </li>
+    /
+    <li>
+      <a href="/" title="code" style="padding-left: 5px; padding-right: 5px"
+        >Code</a
+      >
+    </li>
+    /
+    <li class="active" style="padding-left: 5px">Github Quick Hits!</li>
+  </ol>
+</div>
+<section id="content">
+  <article>
+    <header class="page-header">
+      <h1 style="padding-top: 35px">
+        <a
+          href="./githubQuickhits.html.jinja"
+          rel="bookmark"
+          title="Permalink to Github Quick Hits!"
+          >Github Quick Hits!</a
+        >
+      </h1>
+    </header>
+    <div class="entry-content">
+        <footer class="post-info">
+          <span class="badge bg-secondary">Date</span>
+          <span class="published">
+            <time datetime="2018-08-24T15:40:00-04:00" style="color: black"
+              >Fri 24 August 2018</time
+            >
+          </span>
+          <span class="badge bg-secondary">Tags</span>
+          <a href="./tag/git.html">git</a>
+          /
+          <a href="./tag/coding.html">coding</a>
+        </footer>
+      <br>
+      <br>
+      <h2 style="padding-top: 10px">Command List</h2>
+      <pre>
+      <code>
+        <p style="background-color: #eee">
+          git add *
+          git add filename
+          git status
+          git commit -m "message"
+          git remote add origin url
+          git push -u origin master
+          git pull origin master
+          git remote set-url url
+          git init
+          
+          git config
+          git config List
+          git config user.name
+
+          gh auth login
+          gh repo create username/new-repo -p username/project-template
+        </p>
+      </code>
+      </pre>
+      <h4 style="padding-top: 10px">Use Github Template</h4>
+      <p>
+        Create a template repo on
+        <a href="https://github.com/randallgann/project_template">github</a>
+      </p>
+      <pre>
+        <code>
+          <p style="background-color: #eee">gh repo create randallgann/data_science_repo -p randallgann/project-template</p>
+        </code>
+      </pre>
+    </div>
+  </article>
+</section>
+{% endblock %}
