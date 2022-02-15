@@ -12,17 +12,17 @@ from . import main
 
 @main.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("homepagePosts.html.jinja")
+    return render_template("home.html.jinja")
 
 
 @main.route("/blog", methods=["GET", "POST"])
 def blog():
-    return render_template("post.html.jinja")
+    return render_template("blogPosts.html.jinja")
 
 
 @main.route("/new", methods=["GET", "POST"])
 def new():
-    return render_template("carousel.html.jinja")
+    return render_template("home.html.jinja")
 
 
 @main.route("/favicon.ico", methods=["GET", "POST"])

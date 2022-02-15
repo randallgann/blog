@@ -14,7 +14,7 @@ RUN venv/bin/pip install -r requirements.txt
 
 COPY app app
 COPY migrations migrations
-COPY flask_blog.py config.py boot.sh boot_test.sh ./
+COPY flask_blog.py config.py boot.sh ./
 
 # runtime config
 EXPOSE 5000

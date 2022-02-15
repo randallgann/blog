@@ -25,8 +25,8 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     # Import Dash application
-    from .plotlydash.dashboard import init_dashboard
+    # from .plotlydash.dashboard import init_dashboard
 
-    app = init_dashboard(app)
+    # app = init_dashboard(app)
 
     return app
